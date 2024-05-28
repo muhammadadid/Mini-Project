@@ -29,6 +29,7 @@ const Login = () => {
       console.log(response);
       const token = response.data.token;
       localStorage.setItem("access_token", token);
+      alert("Login Berhasil");
 
       setTimeout(() => {
         navigate("/");
@@ -36,6 +37,7 @@ const Login = () => {
     } catch (error) {
       console.log(error.response);
       setError(error.response.data.error);
+      alert(`Login Gagal ${error.response.data.error}`);
     }
   };
 
@@ -111,9 +113,11 @@ const Login = () => {
           <div className="relative inline-block min-w-[23px] z-[3]">OR</div>
         </div>
         {token && (
-          <div className="text-gray-200">
+          <div className="items-center justify-center text-gray-200 ">
             {" "}
-            <p className="font-bold text-gray-200 font-poppins">Welcome </p>
+            <p className="items-center justify-center font-bold text-gray-200 font-poppins">
+              Welcome
+            </p>
           </div>
         )}
         {error && <div className="text-gray-200">{error}</div>}

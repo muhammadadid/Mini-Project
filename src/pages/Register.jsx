@@ -33,13 +33,15 @@ const Register = () => {
       console.log(response);
       const token = response.data.token;
       localStorage.setItem("access_token", token);
+      alert("Registrasi Berhasil");
 
       setTimeout(() => {
-        navigate("/profile");
+        navigate("/list");
       }, 2000);
     } catch (error) {
       console.log(error.response);
       setError(error.response.data.error);
+      alert(`Registrasi Gagal ${error.response.data.error}`);
     }
   };
   return (
@@ -131,6 +133,7 @@ const Register = () => {
               Sign up
             </div>
           </button>
+
           {token && (
             <div className="text-gray-200">
               {" "}
