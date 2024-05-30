@@ -32,7 +32,7 @@ const Login = () => {
       alert("Login Berhasil");
 
       setTimeout(() => {
-        navigate("/");
+        navigate("/list");
       }, 2000);
     } catch (error) {
       console.log(error.response);
@@ -90,7 +90,7 @@ const Login = () => {
                 className="absolute top-[55px] left-[410px] w-[22px] h-[19px] overflow-hidden z-[3]"
                 loading="lazy"
                 alt=""
-                src="/src/assets/eye 1.png"
+                src="/src/assets/icon/eye 1.png"
               ></img>
             </div>
             <div className="self-stretch flex flex-row items-start justify-end text-[13px] text-firebrick">
@@ -128,7 +128,7 @@ const Login = () => {
               <img
                 className="h-[26px] w-[26px] relative overflow-hidden shrink-0 min-h-[26px] z-[1]"
                 alt=""
-                src="/src/assets/google.png"
+                src="/src/assets/icon/google.png"
               ></img>
 
               <div className="relative text-base font-poppins text-darkgoldenrod text-left z-[1] pt-1">
@@ -142,7 +142,7 @@ const Login = () => {
                     className="flex items-center justify-center pt-3.5 pl-3"
                     loading="lazy"
                     alt=""
-                    src="/src/assets/Facebook.png"
+                    src="/src/assets/icon/Facebook.png"
                   ></img>
                 </div>
               </div>
@@ -151,7 +151,7 @@ const Login = () => {
                   className="flex items-center justify-center pt-3.5 pl-3"
                   loading="lazy"
                   alt=""
-                  src="/src/assets/apple.png"
+                  src="/src/assets/icon/apple.png"
                 ></img>
               </div>
             </div>
