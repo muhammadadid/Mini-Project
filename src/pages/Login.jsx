@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 const Login = () => {
   const navigate = useNavigate();
@@ -60,7 +60,9 @@ const Login = () => {
           </div>
           <div className="w-[124px] relative text-base inline-block shrink-0 z-[1] text-gray-200">
             <p className="m-0">No Account ?</p>
-            <p className="m-0 text-darkgoldenrod">Sign up</p>
+            <Link to={"/register"} className="m-0 text-darkgoldenrod">
+              Sign up
+            </Link>
           </div>
         </div>
         <div className="w-[451px] flex flex-col items-start justify-start gap-[38px] max-w-full mq450:gap-[19px]">

@@ -2,12 +2,13 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const List = () => {
   const [users, setUser] = useState([]);
   const [pagination, setPagination] = useState({
-    page: 1,
-  });
+    page: 1
+  })
 
   const getUser = async () => {
     try {
@@ -15,14 +16,14 @@ const List = () => {
       setUser(response.data?.data);
       console.log(response);
       
-      // const pagination = {
-      //   total : response.data.total,
-      //   per_page: response.data.per_page,
-      //   page: response.data.page,
-      //   total_pages: response.data.total_pages,
-      // };
+      const pagination2 = {
+        total : response.data.total,
+        per_page: response.data.per_page,
+        page: response.data.page,
+        total_pages: response.data.total_pages,
+      };
       
-      // setPagination(pagination);
+      setPagination(pagination2);
       
     } catch (error) {
       console.log(error);
@@ -166,20 +167,20 @@ const List = () => {
                     <h2 className="mb-2 text-lg font-medium">{`${user?.first_name} ${user?.last_name}`}</h2>
                     <p className="mb-4 text-gray-500">{user?.email}</p>
                     <div className="flex space-x-2">
-                      <button className="px-4 py-2 text-white rounded-lg bg-burlywood">
+                      <Link className="px-4 py-2 text-white rounded-lg bg-burlywood" to={`/profile/${user?.id}`} > 
                         View
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 ))}
               </div>
               <div className="flex justify-between">
-                <button onClick={handleBack} >
+                <button onClick={handleBack} className="px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700" >
                   Back
                 </button>
-                <span>{pagination?.page}</span>
-                <button onClick={handleNext} >
+                <span className="px-4 py-2 font-bold underline text-decoration-line">{pagination?.page}</span>
+                <button onClick={handleNext} className="px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700" >
                   Next
                 </button>
               </div>

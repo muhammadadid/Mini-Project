@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Register = () => {
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
@@ -72,9 +72,9 @@ const Register = () => {
             <div className="flex flex-col items-start justify-start px-0 pt-px pb-0">
               <div className="relative text-[13px] font-poppins text-left z-[1]">
                 <p className="m-0 text-gray-200">Have an Account ?</p>
-                <a href="" className="m-0 text-darkgoldenrod">
+                <Link to={"/login"} className="m-0 text-darkgoldenrod">
                   Sign in
-                </a>
+                </Link>
               </div>
             </div>
           </div>

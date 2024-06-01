@@ -106,6 +106,18 @@ const Navbar = () => {
               Setting
             </div>
           </div>
+          <button className="flex flex-row items-center justify-start gap-[15px] bg-burlywood text-white ">
+            <img
+              className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+              loading="lazy"
+              alt=""
+              src="/src/assets/icon/seting.png"
+            ></img>
+
+            <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
+              Logout
+            </div>
+          </button>
         </div>
       </div>
     </div>
