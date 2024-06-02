@@ -1,4 +1,14 @@
+import { Link, useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const token = localStorage.getItem("access_token");
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+    setTimeout(() => {
+      navigate("/login");
+    },1000);
+  };
   return (
     <div className="mt-[-1px] bg-burlywood flex flex-col items-start justify-start pt-10 pb-[451px] pr-[92px] pl-8 gap-[56px] mq450:gap-[28px] mq450:pt-5 mq450:pr-5 mq450:pb-[190px] mq450:box-border mq825:pt-[26px] mq825:pb-[293px] mq825:box-border">
       <div className="flex flex-row items-center justify-start">
@@ -20,7 +30,7 @@ const Navbar = () => {
               Dashboard
             </b>
           </div>
-          <div className="flex flex-row items-center justify-start gap-[16px]">
+          <Link to={"/"} className="flex flex-row items-center justify-start gap-[16px]">
             <img
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
@@ -28,10 +38,10 @@ const Navbar = () => {
               src="/src/assets/icon/user.png"
             ></img>
 
-            <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[45px]">
+            <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[45px] text-white">
               Users
             </div>
-          </div>
+          </Link>
           <div className="flex flex-row items-center justify-start gap-[15px]">
             <img
               className="h-6 w-6 relative min-h-[24px]"
@@ -106,18 +116,18 @@ const Navbar = () => {
               Setting
             </div>
           </div>
-          <button className="flex flex-row items-center justify-start gap-[15px] bg-burlywood text-white ">
+          {token && <Link className="flex flex-row items-center justify-start gap-[15px] bg-burlywood text-white " onClick={handleLogout}>
             <img
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/seting.png"
+              src="/src/assets/icon/logout.png"
             ></img>
 
-            <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
+            <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]" >
               Logout
             </div>
-          </button>
+          </Link>}
         </div>
       </div>
     </div>

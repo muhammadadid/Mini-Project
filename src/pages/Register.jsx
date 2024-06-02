@@ -36,7 +36,7 @@ const Register = () => {
       alert("Registrasi Berhasil");
 
       setTimeout(() => {
-        navigate("/list");
+        navigate("/");
       }, 2000);
     } catch (error) {
       console.log(error.response);

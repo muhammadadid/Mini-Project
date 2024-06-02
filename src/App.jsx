@@ -1,26 +1,10 @@
-import Register from "./pages/Register"
-import Login from "./pages/Login"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useRoutes } from "react-router-dom";
 
-import Profile from "./pages/Profile"
-import List from "./pages/List"
-
-
-
+import { routeList } from "./routes/routeList";
 
 function App() {
- 
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile/:id" element={<Profile />} />
-        <Route path="/" element={<List />} />
-      </Routes>
-    </BrowserRouter>
-  )
+  const element = useRoutes(routeList);
+  return element;
 }
 
-export default App
+export default App;

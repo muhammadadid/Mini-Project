@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
@@ -63,6 +63,9 @@ const Profile = () => {
               </div>
             </div>
           </div>
+          <Link to={"/"} className="px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
+            Back        
+          </Link>
         </section>
       </div>
     </div>
