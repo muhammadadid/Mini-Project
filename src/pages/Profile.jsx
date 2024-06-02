@@ -1,14 +1,17 @@
+import { data } from "autoprefixer";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 
 const Profile = () => {
   const [user, setUser] = useState([]);
   const param = useParams();
   console.log(param?.id);
-  const navigate = useNavigate();
+
+  const LinkList =["Dashboard", "Users", "Documents", "Photos", "Hierarchy", "Message","Help", "Settings", "Logout"]
+  
 
   const getProfile = async () => {
     try {
@@ -28,7 +31,7 @@ const Profile = () => {
 
   return (
     <div className="w-full relative bg-whitesmoke-100 overflow-hidden flex flex-row items-start justify-start py-0 pr-10 pl-0 box-border gap-[40px] leading-[normal] tracking-[normal] text-left text-sm text-text-3- font-hachi-maru-pop mq1050:gap-[20px] mq1050:pl-5 mq1050:box-border">
-      <Navbar />
+      <Navbar data={LinkList} />
       <div className="flex-1 flex flex-col items-start justify-start pt-8 px-0 pb-0 box-border max-w-[calc(100%_-_118px)] mq1050:max-w-full">
         <section className="self-stretch flex flex-col items-start justify-start gap-[32px] max-w-full mq750:gap-[16px]">
           <div className="self-stretch flex flex-row items-start justify-between max-w-full gap-[20px] text-left text-5xl text-darkslategray-100 font-poppins">

@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ data }) => {
   const token = localStorage.getItem("access_token");
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("access_token");
     setTimeout(() => {
       navigate("/login");
-    },1000);
+    }, 1000);
   };
   return (
     <div className="mt-[-1px] bg-burlywood flex flex-col items-start justify-start pt-10 pb-[451px] pr-[92px] pl-8 gap-[56px] mq450:gap-[28px] mq450:pt-5 mq450:pr-5 mq450:pb-[190px] mq450:box-border mq825:pt-[26px] mq825:pb-[293px] mq825:box-border">
@@ -27,10 +27,13 @@ const Navbar = () => {
             ></img>
 
             <b className="relative tracking-[0.5px] leading-[150%] font-semibold inline-block min-w-[90px]">
-              Dashboard
+              {data[0]}
             </b>
           </div>
-          <Link to={"/"} className="flex flex-row items-center justify-start gap-[16px]">
+          <Link
+            to={"/"}
+            className="flex flex-row items-center justify-start gap-[16px]"
+          >
             <img
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
@@ -39,7 +42,7 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[45px] text-white">
-              Users
+              {data[1]}
             </div>
           </Link>
           <div className="flex flex-row items-center justify-start gap-[15px]">
@@ -51,7 +54,7 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[91px]">
-              Documents
+              {data[2]}
             </div>
           </div>
           <div className="flex flex-row items-center justify-start gap-[15px]">
@@ -63,7 +66,7 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
-              Photos
+              {data[3]}
             </div>
           </div>
           <div className="flex flex-row items-center justify-start gap-[16px]">
@@ -75,7 +78,7 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[77px]">
-              Hierarchy
+              {data[4]}
             </div>
           </div>
         </nav>
@@ -89,7 +92,7 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[69px]">
-              Message
+              {data[5]}
             </div>
           </div>
           <div className="flex flex-row items-center justify-start gap-[16px]">
@@ -101,7 +104,7 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[37px]">
-              Help
+              {data[6]}
             </div>
           </div>
           <div className="flex flex-row items-center justify-start gap-[15px]">
@@ -113,21 +116,26 @@ const Navbar = () => {
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
-              Setting
+              {data[7]}
             </div>
           </div>
-          {token && <Link className="flex flex-row items-center justify-start gap-[15px] bg-burlywood text-white " onClick={handleLogout}>
-            <img
-              className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-              loading="lazy"
-              alt=""
-              src="/src/assets/icon/logout.png"
-            ></img>
+          {token && (
+            <Link
+              className="flex flex-row items-center justify-start gap-[15px] bg-burlywood text-white "
+              onClick={handleLogout}
+            >
+              <img
+                className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+                loading="lazy"
+                alt=""
+                src="/src/assets/icon/logout.png"
+              ></img>
 
-            <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]" >
-              Logout
-            </div>
-          </Link>}
+              <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
+                {data[8]}
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </div>
