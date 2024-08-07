@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import { useState, useEffect } from "react";

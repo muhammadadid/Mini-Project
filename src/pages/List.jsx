@@ -55,10 +55,10 @@ const List = () => {
   };
   
   return (
-    <div className="w-full h-[1024px] relative bg-neutral-20 overflow-hidden flex flex-row items-start justify-start pt-0 pb-[29.4px] pr-[18px] pl-0 box-border gap-[24px] leading-[normal] tracking-[normal] text-left text-xl text-indianred font-body-2-regular mq825:pl-6 mq825:pr-6 mq825:box-border mq450:h-auto">
+    <div className=" w-full h-[1024px] relative bg-neutral-20 overflow-hidden flex flex-row items-start justify-start pt-0 pb-[29.4px] pr-[18px] pl-0 box-border gap-[24px] leading-[normal] tracking-[normal] text-left text-xl text-indianred font-body-2-regular mq825:pl-6 mq825:pr-6 mq825:box-border mq450:h-auto">
       <div className="w-[254px] flex flex-col items-start justify-start pt-0 px-0 pb-px box-border relative mq825:hidden">
         <Navbar data={LinkList} />
-        <div className="self-stretch h-[394px] bg-burlywood"></div>
+        
       </div>
       <main className="flex-1 flex flex-col items-start justify-start pt-[31px] px-0 pb-0 box-border max-w-[calc(100%_-_278px)] mq825:max-w-full">
         <footer className="self-stretch flex flex-col items-end justify-start gap-[110px] max-w-full text-left text-xl text-neutral-100 font-body-2-regular mq675:gap-[27px]">
