@@ -95,7 +95,7 @@ const List = () => {
                       className="self-stretch h-[48.7px] rounded-2xl max-w-full overflow-hidden shrink-0 object-contain"
                       loading="lazy"
                       alt=""
-                      src="/src/assets/icon/Search.png"
+                      src="/src/assets/icon/search.png"
                     ></img>
                   </div>
                   <div className="h-[54.3px] w-[138px] relative">
@@ -104,7 +104,7 @@ const List = () => {
                         className="w-full overflow-hidden h-full object-contain absolute left-[3px] top-[4px] [transform:scale(1.377)]"
                         loading="lazy"
                         alt=""
-                        src="/src//assets/icon/BG.png"
+                        src="/src//assets/icon/bg.png"
                       ></img>
                     </div>
                     <h2 className="m-0 absolute top-[0px] left-[85px] text-inherit tracking-[0.44px] leading-[54px] font-extrabold font-inherit inline-block w-[46px] z-[1] mq450:text-lg mq450:leading-[43px]">

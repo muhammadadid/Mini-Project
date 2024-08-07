@@ -38,7 +38,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/user.png"
+              src="/src/assets/icon/users.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[45px] text-white">
@@ -50,7 +50,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/document.png"
+              src="/src/assets/icon/doc.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[91px]">
@@ -62,7 +62,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/gallery.png"
+              src="/src/assets/icon/galery.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
@@ -74,7 +74,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/herarcy.png"
+              src="/src/assets/icon/herarchy.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[77px]">
@@ -88,7 +88,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/pesan.png"
+              src="/src/assets/icon/pesan1.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[69px]">
@@ -100,7 +100,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/help.png"
+              src="/src/assets/icon/help1.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[37px]">
@@ -112,7 +112,7 @@ const Navbar = ({ data }) => {
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/src/assets/icon/seting.png"
+              src="/src/assets/icon/setting.png"
             ></img>
 
             <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
@@ -128,7 +128,7 @@ const Navbar = ({ data }) => {
                 className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
                 loading="lazy"
                 alt=""
-                src="/src/assets/icon/logout.png"
+                src="/src/assets/icon/logOut.png"
               ></img>
 
               <div className="relative tracking-[0.5px] leading-[150%] inline-block min-w-[56px]">
